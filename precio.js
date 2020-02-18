@@ -8,9 +8,10 @@ export default class Precio{
     }
 
     getPrecio(){
-        console.log(`El precio del producto es ${this.costo}`)
+        return(this.costo);
     }
 }
+
 
 let precio1 = new Precio(25)
 precio1.getPrecio()
