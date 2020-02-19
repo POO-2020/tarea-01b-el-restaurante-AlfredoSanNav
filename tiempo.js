@@ -11,13 +11,16 @@ class Tiempo{
         this.periodo = periodo
     }
     getFormato12(){
-        let horaCompleta = `${hora}:${this.minuto} ${periodo}`
-        return(horaCompleta)
+        return(`${this.hora}:${this.minuto} ${this.periodo}`)
     }
 
     getFormato24(){
-        if(this.periodo = "PM" || "pm" || "Pm"){ this.hora = this.hora + 12 }
-    let horaCompleta = `${hora}:${this.minuto}`
+        if( this.periodo === ("PM") ||this.periodo === ( "pm") ||this.periodo ===("Pm") ){ 
+            this.hora = this.hora + 12
+         }
+    let horaCompleta = `${this.hora}:${this.minuto}`
     return(horaCompleta)
     }
 }
+let tiempo = new Tiempo(5,25,"AM")
+console.log(tiempo.getFormato24())

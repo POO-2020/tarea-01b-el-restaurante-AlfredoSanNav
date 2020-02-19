@@ -4,7 +4,10 @@ class Fecha{
      * @param {date} fecha 
      */
     constructor(fecha){
-        this.fecha = new Date
+        this.fecha = fecha
+        this.diaSemana = ["Domingo","Lunes","Martes","Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+        this.nombreMes = ["Enero", "Febrero", "Marzo","Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        
     }
     getAños(){
         let años =  2020 - getFullYear(this.fecha) 
@@ -22,12 +25,16 @@ class Fecha{
     }
     getDias(){
         let dias = (2020 - getFullYear(this.fecha))*12*4*7
+        return(dias)
     }
 
     getFecha(){
-
+        let fechaCorta = `${getDay(this.fecha)}/${this.nombreMes(getMonth())}/${getFullYear()}`
+        return(this.fecha)
     }
     getDiaFecha(){
+        let diaFecha = this.diaSemana(getDay(this.fecha))
+        return(this.diaFecha)
 
     }
 }
