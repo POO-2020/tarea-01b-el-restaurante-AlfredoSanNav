@@ -18,7 +18,7 @@ class Pedido{
 
     }
     getResumen(){
-
+        return(`${getFecha()} `)
     }
 
     getNumeroElementos(){
