@@ -1,6 +1,6 @@
 import Producto from "./producto.js"
 
-class ElementoPedido{
+export default class ElementoPedido{
     /**
      * 
      * @param {Producto} producto Producto que se va a comprar
@@ -12,7 +12,6 @@ class ElementoPedido{
 
     }
     getDescripcion(){
-        let descripcion = `${this.cantidad}x ${this.nombre} $ ${this.precio}`
-        return(descripcion)
+        return(`${this.cantidad}x ${this.producto.getDescripcion()}`)
     }
 }

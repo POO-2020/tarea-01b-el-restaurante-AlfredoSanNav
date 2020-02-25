@@ -1,4 +1,4 @@
-class Tiempo{
+export default class Tiempo{
     /**
      * 
      * @param {number} hora Hora del día en formato de 12 horas
@@ -22,5 +22,6 @@ class Tiempo{
     return(horaCompleta)
     }
 }
+/*
 let tiempo = new Tiempo(5,25,"AM")
-console.log(tiempo.getFormato24())
+console.log(tiempo.getFormato24()) */

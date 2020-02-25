@@ -1,4 +1,4 @@
-class Fecha{
+export default class Fecha{
     /**
      * 
      * @param {date} fecha 
@@ -29,8 +29,8 @@ class Fecha{
     }
 
     getFecha(){
-        let fechaCorta = `${getDay(this.fecha)}/${this.nombreMes(getMonth())}/${getFullYear()}`
-        return(this.fecha)
+        let fechaCorta = `${this.fecha.getDate()}/${this.nombreMes[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`
+        return(fechaCorta)
     }
     getDiaFecha(){
         let diaFecha = this.diaSemana(getDay(this.fecha))

@@ -1,5 +1,5 @@
 import Direccion from "./direccion.js"
-class Cliente{
+export default class Cliente{
     /**
      * 
      * @param {string} nombre Nombre completo del cliente
