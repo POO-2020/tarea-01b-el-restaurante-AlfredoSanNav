@@ -23,7 +23,7 @@ export default class Direccion{
         return(direccion)
     }
     getFormatoExtendido(){
-        let direccion = ` ${this.calle} ${this.numeroExterior},${this.numeroInterior} ${this.colonia} CP.${this.codigoPostal} ${this.ciudad}, ${this.municipio}`
+        return(` ${this.calle} ${this.numeroExterior},${this.numeroInterior} ${this.colonia} CP.${this.codigoPostal} ${this.ciudad}, ${this.municipio}`)
 
     }
 }

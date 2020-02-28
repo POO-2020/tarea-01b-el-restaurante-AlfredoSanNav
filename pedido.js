@@ -2,7 +2,7 @@ import Tiempo from "./tiempo.js"
 import Fecha from "./fecha.js"
 import Cliente from "./cliente.js"
 import ElementoPedido from "./elemento-pedido.js"
-import Producto from "./producto.js"
+
 
 export default class Pedido{
     /**
@@ -64,12 +64,13 @@ export default class Pedido{
     }
 
     listarElemento(){
-        this.elementosPedidos.forEach(elemento =>{
+        this.elementosPedidos.forEach((elemento, i) =>{
             console.log(elemento.getDescripcion())
         })
 
     }
 }
+/*
 let pedido1 = new Pedido(new Fecha(new Date ("2010-02-25")), new Tiempo(7,57,"AM"), new Cliente("Alfredo Sánchez Nava", "República de Paraguay 2159", 3121947286))
 pedido1.agregarElemento()
     let e1 = new ElementoPedido(new Producto("Pizza de peperoni", 75))
@@ -78,4 +79,4 @@ pedido1.agregarElemento()
 pedido1.listarElemento()
 console.log(pedido1.getResumen())
 console.log(pedido1.getNumeroElementos())
-console.log(pedido1.getProductos())
+console.log(pedido1.getProductos()) */

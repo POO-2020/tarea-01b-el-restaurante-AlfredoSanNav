@@ -12,6 +12,6 @@ export default class Precio{
     }
 }
 
-
+/*
 let precio1 = new Precio(25)
-precio1.getPrecio()
+precio1.getPrecio() */
