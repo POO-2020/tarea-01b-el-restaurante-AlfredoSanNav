@@ -13,37 +13,14 @@ class Main{
         this.restaurante = new Restaurante(new Direccion("El pequeño Cesar", 3121455958,"Avenida siempre viva", 2159, 0, "Andares del Jazmín", 2804, "Colima", "Colima"))
     }
     registrarPedidos(){        
-        this.restaurante.registrarPedidos(pedido1);
-        this.restaurante.registrarPedidos(pedido2);
-        this.restaurante.registrarPedidos(pedido3);
+        this.restaurante.registrarPedidos(pedido);
         this.restaurante.listarPedidos();
     }
-    registrarProductos(){
-        
-        this.restaurante.registrarProductos(producto1);
-        this.restaurante.registrarProductos(producto2);
-        this.restaurante.registrarProductos(producto3);
+    registrarProductos(){     
+        this.restaurante.registrarProductos(Producto);
         this.restaurante.listrarProductos();
     }
     listarPedidos(){
         this.restaurante.listarPedido()
     }
 }
-var producto1= new Producto("pizza de poio",new Precio(50));
-var producto2= new Producto("Pizza de camaron",new Precio(100));
-var producto3=new Producto("Pizza con piña",new Precio(10));
-var elemento1= new ElementoPedido(producto1,2);
-var elemento2= new ElementoPedido(producto2,4);
-var elemento3= new ElementoPedido(producto3,5);
-var pedido1 = new Pedido(new Fecha(19,2,2020),new Tiempo(22,10),new Cliente("Elmo",new Direccion("Falsa",123,0,"Malavista",28984,"Colima","Colima"),3123027485));
-var pedido2 = new Pedido(new Fecha(19,2,2020),new Tiempo(22,10),new Cliente("Elmer",new Direccion("Falsa",124,0,"Malavista",28984,"Colima","Colima"),3123127485));
-var pedido3 = new Pedido(new Fecha(19,2,2020),new Tiempo(22,10),new Cliente("Elza",new Direccion("Falsa",125,0,"Malavista",28984,"Colima","Colima"),3123227485));
-pedido1.agregarElemento(elemento1);
-pedido1.agregarElemento(elemento2)
-pedido2.agregarElemento(elemento2);
-pedido3.agregarElemento(elemento3);
-pedido1.getCostoTotal(elemento1);
-var app = new Main();
-app.registrarPedidos();
-console.log("-------------------");
-app.registrarProductos();
